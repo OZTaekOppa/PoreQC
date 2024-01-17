@@ -29,17 +29,17 @@ PoreQC comprises two key features (basecalling and quality control) and four int
 ## INSTALLATION
 Please download the program from [this link](https://github.com/OZTaekOppa/PoreQC)
 !!! Please note, that programs and dependencies can also be installed via Bioconda. For any other issues, we highly encourage users to use the [Issues](https://github.com/OZTaekOppa/PoreQC/issues).
-~~~
-    ### Create the virtual environment
+    ~~~
+    Create the virtual environment
     Need to be updated
     
-    ### Get source
+    Get source
     Need to be updated
     
-    ### Install packages
+    Install packages
     Need to be updated
     
-    ### Run
+    Run
     Need to be updated
     ~~~
 
