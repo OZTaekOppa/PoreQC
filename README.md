@@ -43,6 +43,24 @@ Please download the program from [this link](https://github.com/OZTaekOppa/PoreQ
     Need to be updated
     ~~~
 
+## License
+
+PoreQC is provided under the MIT license and is based on other open-source software:
+
+[Guppy] (https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview) for for basecalling and processing raw signal data from nanopore sequencing devices, providing accurate DNA sequence information.
+
+[Dorado] (https://github.com/nanoporetech/dorado) for Oxford Nanopore long-read sequencing data, offering enhanced accuracy in detecting structural variants and single nucleotide variants.
+
+[Buttery-eel] (https://github.com/Psy-Fer/buttery-eel) for a Slow5 file reader and basecalling wrapper for Guppy and Dorado.
+
+[Cutadapt] (https://github.com/marcelm/cutadapt) for removing adapters, primers, and other unwanted sequences from high-throughput sequencing data.
+
+[Sequali] (https://github.com/rhpvorderman/sequali) for evaluating the quality of sequencing data through the generation of comprehensive metrics and visualizations.
+
+[Nextflow] (https://github.com/nextflow-io/nextflow) for a data-driven computational workflow engine designed to facilitate scalable and reproducible scientific workflows.
+
+[In-house Perl Script] for calculating basic statistics of a FASTQ file in-house.
+
 
 ### Assembly:
 - Hifiasm: Using long reads, the phased contigs will be generated (Taek)
