@@ -1,11 +1,6 @@
 # PoreQC
 An automated nextflow pipeline read basecalling, quality control and adapter removal
 
-# NCIG_T2T_RefGenome_Phase_I
-- **National Centre for Indigenous Genomics (NCIG) Phase I: Generating Telomere-to-telomere (T2T) Reference Genomes of Indigenous Australians**
-  - **Ten *de novo* genome assemblies of Indigenous Australians advance population and medical genomics of diverse ancestries**
-    - **NCIG ANU Collaboration: Taek, Kirat, Kosar, Hadi, & Hardip**
-    - **NCIG ANU Data Management: Jiaxin**
 
 ## Brief Background
 PoreQC is a nextflow pipeline for Oxford nanopore reads (Slow5, Pod5 and Fastq). Integrating with Guppy, Dorado, Buttery-eel, Cutadapt, and Sequali, the automated pipeline can work for basecalling, quality control and removal adapters. We (Hyungtaek Jung and National Centre for Indigenous Genomics @ The Australian National University, Australia) initially started this project to provide comprehensive data management @ National Computational Infrastructure for biologists. As a CLI application, we have tested it for ONT long-read data focusing on medium and large-scale whole genome shotgun datasets that can be widely used to the greater research community. However, please note that basecalling and visualising a big dataset would require large computational resources on HPC or Cloud. 
@@ -13,6 +8,7 @@ PoreQC is a nextflow pipeline for Oxford nanopore reads (Slow5, Pod5 and Fastq).
 
 ## Citation
 Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaarachchi, Hardip Patel: PoreQC: An automated nextflow pipeline for oxford nanopore read basecalling, quality control and adapter removal, [PLoS Comp Biol Submitted](https://www.biorxiv.org/XXXX).
+
 
 ## Contents:
     STABLE
@@ -23,6 +19,30 @@ Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaar
     WIKI PAGE
     AUTHOR
     COPYRIGHT
+
+
+## STABLE (version 0.0.XXX)
+Release date: January 2024
+PoreQC comprises two key features (basecalling and quality control) and four interactive steps with open-source programs (See LICENSE), mainly written in Nextflow. 
+
+
+## INSTALLATION
+Please download the program from [this link](https://github.com/OZTaekOppa/PoreQC)
+!!! Please note, that programs and dependencies can also be installed via Bioconda. For any other issues, we highly encourage users to use the [Issues](https://github.com/OZTaekOppa/PoreQC/issues).
+~~~
+    ### Create the virtual environment
+    Need to be updated
+    
+    ### Get source
+    Need to be updated
+    
+    ### Install packages
+    Need to be updated
+    
+    ### Run
+    Need to be updated
+    ~~~
+
 
 ### Assembly:
 - Hifiasm: Using long reads, the phased contigs will be generated (Taek)
