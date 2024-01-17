@@ -15,14 +15,14 @@ PoreQC is a nextflow pipeline for Oxford nanopore reads (Slow5, Pod5 and Fastq).
 Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaarachchi, Hardip Patel: PoreQC: An automated nextflow pipeline for oxford nanopore read basecalling, quality control and adapter removal, [PLoS Comp Biol Submitted](https://www.biorxiv.org/XXXX).
 
 ## Contents:
-    •	STABLE
-    •	INSTALLATION
-    •	LICENSE 
-    •	GETTING STARTED
-    •	FAQ
-    •	WIKI PAGE
-    •	AUTHOR
-    •	COPYRIGHT
+    STABLE
+    INSTALLATION
+    LICENSE 
+    GETTING STARTED
+    FAQ
+    WIKI PAGE
+    AUTHOR
+    COPYRIGHT
 
 ### Assembly:
 - Hifiasm: Using long reads, the phased contigs will be generated (Taek)
