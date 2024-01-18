@@ -63,7 +63,7 @@ PoreQC is provided under the MIT license and is based on other open-source softw
 [In-house Perl Script] for calculating basic statistics of a FASTQ file in-house.
 
 
-## Tested Datasets
+### Tested Datasets
 Reference genome (https://www.ncbi.nlm.nih.gov/assembly/GCF_000001735.3/#/st)
 Oxford Nanopore reads (https://ngdc.cncb.ac.cn/gsa/browse/CRA004538) and (https://www.sciencedirect.com/science/article/pii/S1672022921001741)
 
@@ -117,4 +117,20 @@ cutadapt -g TTTTTTTTCCTGTACTTCGTTCAGTTACGTATTGCT -o /output_folder/ input.fastq
 - Mandatory parameters: input.fastq/fq (input fastq file) --adapter-file (adapter sequences as .tsv), --outdir (output directory), and -t (CPU number)
 sequali input.fastq --adapter-file "$ASFL" --outdir /output_folder/ -t 2
 
+
+## FAQ
+
+We encourage users to use the [Issues](https://github.com/OZTaekOppa/PoreQC/issues).
+
+## WIKI PAGE
+
+Please see GitHub page.
+
+## AUTHOR
+
+[Hyungtaek Jung](hyungtaek.jung@anu.edu.au).
+
+## COPYRIGHT
+
+The full PoreQC is distributed under the MIT license. 
 
