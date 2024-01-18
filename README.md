@@ -11,14 +11,14 @@ Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaar
 
 
 ## Contents:
-    STABLE
-    INSTALLATION
-    LICENSE 
-    GETTING STARTED
-    FAQ
-    WIKI PAGE
-    AUTHOR
-    COPYRIGHT
++ STABLE
++ INSTALLATION
++ LICENSE 
++ GETTING STARTED
++ FAQ
++ WIKI PAGE
++ AUTHOR
++ COPYRIGHT
 
 
 ## STABLE (version 0.0.XXX)
