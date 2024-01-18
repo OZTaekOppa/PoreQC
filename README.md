@@ -80,6 +80,7 @@ Oxford Nanopore reads(https://ngdc.cncb.ac.cn/gsa/browse/CRA004538) and (https:/
 - Computing environment: Please use an HPC or Cloud to facilitate the CPU and GPU resources with a proper queue job submission.
 - Buttery-eel.pbs.sh: Secure the [buttery-eel-guppy](https://github.com/hasindu2008/nci-scripts/blob/main/basecall/buttery-eel-guppy.pbs.sh) or [butter-eel-dorado](https://github.com/hasindu2008/nci-scripts/blob/main/basecall/buttery-eel-dorado.pbs.sh) pipelines
 - Input: Slow5 secured from Slow5tools.
+- Output: Basecalled and trimmed Fastq file.
 - Select model: Depending on ONT library preparation and sequencing kits, users must select the proper model in the pipeline.
 - Module load: Users can choose two options between buttery-eel (v0.4.2) + guppy (v6.5.7) and buttery-eel (v0.4.2) + dorado (v7.2.13). Please check the page of Butter-eel [Buttery-eel](https://github.com/Psy-Fer/buttery-eel) for the latest versions.
 - Default mode: This mode will do the basic basecalling with detection and removal of adapters.
@@ -98,7 +99,8 @@ qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_ra
 
 ### Reads Stats:
 - Requirement: The script of Perl/bash requires a Perl library.
-- Input: Fastq file generated from buttery-eel pipeline. 
+- Input: Fastq file generated from buttery-eel pipeline.
+- Output: A summary of csv file for the Fastq.
 - Perl script: An in-house script to calculate the basic stats of Fastq file (including compressed file format).
 1. Usage: Execute this command in the terminal.
 1. Mandatory parameters: --input.fq and --out para
@@ -111,6 +113,7 @@ perl fqreadstats.pl --input.fq test_reads.fq.gz --out test_reads.csv --t 2 --mem
 ### Cutadapt 
 - Installation and Requirement: Please see the page of [Cutadapt](https://github.com/marcelm/cutadapt)
 - Input: Fastq file generated from buttery-eel pipeline.
+- Output: Trimmed Fastq file.
 1. Usage: Execute this command in the terminal.
 1. Mandatory parameters: -g, -a, or -b (adapter sequences), -o (output directory), and input.fastq/fq (input fastq file)
 ```
@@ -121,6 +124,7 @@ cutadapt -g TTTTTTTTCCTGTACTTCGTTCAGTTACGTATTGCT -o /output_folder/ input.fastq
 ### Sequali:
 - Installation and Requirement: Please see the page of [Sequali](https://github.com/rhpvorderman/sequali) 
 - Input: Fastq file generated from buttery-eel pipeline or Cutadapt.
+- Output: A summary of html and json file for the Fastq.
 1. Usage: Execute this command in the terminal.
 1. Mandatory parameters: input.fastq/fq (input fastq file) --adapter-file (adapter sequences as .tsv), --outdir (output directory), and -t (CPU number)
 ```
