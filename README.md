@@ -131,6 +131,20 @@ cutadapt -g TTTTTTTTCCTGTACTTCGTTCAGTTACGTATTGCT -o /output_folder/ input.fastq
 sequali input.fastq --adapter-file "$ASFL" --outdir /output_folder/ -t 2
 ```
 
+
+### Nextflow:
+- Installation and Requirement: Please see the page of [Nextflow](https://github.com/rhpvorderman/sequali???????) 
+- Input: Slow5 file generated from [Slow5tools](https://github.com/hasindu2008/slow5tools).
+- Output: Cleaned Fastq and its summary with html and json files.
+- Interaction: A user can indicate the input/output folder/file for their convenience.
+- Resume: An interrupted stage/step can be resumed via Nextflow management.
+1. Usage: Execute this command in the terminal.
+1. Mandatory parameters: input.fastq/fq (input fastq file) --adapter-file (adapter sequences as .tsv), --outdir (output directory), and -t (CPU number)
+```
+sequali input.fastq --adapter-file "$ASFL" --outdir /output_folder/ -t 2
+```
+
+
 ## FAQ
 
 We encourage users to use the [Issues](https://github.com/OZTaekOppa/PoreQC/issues).
