@@ -137,7 +137,7 @@ Please see GitHub page.
 
 ## AUTHOR
 
-[Hyungtaek Jung](hyungtaek.jung@anu.edu.au).
+**Hyungtaek Jung** and [the **National Centre for Indigenous Genomics**].
 
 ## COPYRIGHT
 
