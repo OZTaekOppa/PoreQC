@@ -131,13 +131,16 @@ sequali input.fastq --adapter-file "$ASFL" --outdir /output_folder/ -t 2
 
 We encourage users to use the [Issues](https://github.com/OZTaekOppa/PoreQC/issues).
 
+
 ## WIKI PAGE
 
 Please see GitHub page.
 
+
 ## AUTHOR
 
-**Hyungtaek Jung** and [the **National Centre for Indigenous Genomics**].
+**Hyungtaek Jung** and [the **National Centre for Indigenous Genomics**](https://ncig.anu.edu.au/).
+
 
 ## COPYRIGHT
 
