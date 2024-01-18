@@ -83,34 +83,38 @@ PoreQC, integrated with Nextflow, has two specific features: a basecalling (Slow
 - Select model: Depending on ONT library preparation and sequencing kits, users must select the proper model in the pipeline.
 - Module load: Users can choose two options between buttery-eel (v0.4.2) + guppy (v6.5.7) and buttery-eel (v0.4.2) + dorado (v7.2.13). Please check the page of Butter-eel [Buttery-eel] (https://github.com/Psy-Fer/buttery-eel) for the latest versions.
 - Default mode: This mode will do the basic basecalling with detection and removal of adapters.
-        - Usage: Execute this command in the terminal.
-        - qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
+Usage: Execute this command in the terminal.
+qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
   
 - Advanced mode: This mode will do the basecalling, removal adapters and split reads.
-        - Add parameters: Add these parameters "--detect_mid_strand_adapter --trim_adapters --detect_adapter --do_read_splitting" in the pipeline, specifically after "--max_queued_reads 20000."
-        - Usage: Execute this command in the terminal.
-        - qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
+Add parameters: Add these parameters "--detect_mid_strand_adapter --trim_adapters --detect_adapter --do_read_splitting" in the pipeline, specifically after "--max_queued_reads 20000."
+Usage: Execute this command in the terminal.
+qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
 
 
 ### Reads Stats:
+- Requirement: The script of Perl/bash requires a Perl library.
 - Input: Fastq file generated from buttery-eel pipeline. 
-- Caln50 package: Taek
-- ASMGENE: Taek
-- QUAST: Taek
-- Any other tools and suggestions: Assemblytics, VGP pipeline
+- Perl script: An in-house script to calculate the basic stats of Fastq file (including compressed file format).
+- Usage: Execute this command in the terminal.
+Mandatory parameters: --input.fq and --out para
+Optional parameters: --t and --mem
+Help: perl fqreadstats.pl --help
+perl fqreadstats.pl --input.fq test_reads.fq.gz --out test_reads.csv --t 2 --mem 40
 
-### Detection of telomere and centromere 
-- In-house pipeline: Kirat
-- Any other tools and suggestions:
-
-### Annotations:
-- Human RefSeq transcripts:
-- RepeatMasker:
-- WindowMasker:
-- RepeatModeler:
-- Any other tools and suggestions:
+### Cutadapt 
+- Installation and Requirement: Please see the page of [Cutadapt] (https://github.com/marcelm/cutadapt)
+- Input: Fastq file generated from buttery-eel pipeline.
+- Usage: Execute this command in the terminal.
+- Mandatory parameters: -g, -a, or -b (adapter sequences), -o (output directory), and input.fastq/fq (input fastq file)
+cutadapt -g TTTTTTTTCCTGTACTTCGTTCAGTTACGTATTGCT -o /output_folder/ input.fastq
 
 
-
+### Sequali:
+- Installation and Requirement: Please see the page of [Sequali] (https://github.com/rhpvorderman/sequali) 
+- Input: Fastq file generated from buttery-eel pipeline or Cutadapt.
+- Usage: Execute this command in the terminal.
+- Mandatory parameters: input.fastq/fq (input fastq file) --adapter-file (adapter sequences as .tsv), --outdir (output directory), and -t (CPU number)
+sequali input.fastq --adapter-file "$ASFL" --outdir /output_folder/ -t 2
 
 
