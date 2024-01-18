@@ -3,7 +3,7 @@ An automated nextflow pipeline read basecalling, quality control and adapter rem
 
 
 ## Brief Background
-PoreQC is a nextflow pipeline for Oxford nanopore reads (Slow5, Pod5 and Fastq). Integrating with Guppy, Dorado, Buttery-eel, Cutadapt, and Sequali, the automated pipeline can work for basecalling, quality control and removal adapters. We (Hyungtaek Jung and National Centre for Indigenous Genomics @ The Australian National University, Australia) initially started this project to provide comprehensive data management @ National Computational Infrastructure for biologists. As a CLI application, we have tested it for ONT long-read data focusing on medium and large-scale whole genome shotgun datasets that can be widely used to the greater research community. However, please note that basecalling and visualising a big dataset would require large computational resources on HPC or Cloud. 
+PoreQC is a nextflow pipeline for Oxford nanopore reads (Slow5, Pod5 and Fastq). Integrating with Guppy, Dorado, Buttery-eel, Cutadapt, and Sequali, the automated pipeline can work for basecalling, quality control and removal adapters. We (Hyungtaek Jung and National Centre for Indigenous Genomics @ The Australian National University, Australia) initially started this project to provide comprehensive data management @ National Computational Infrastructure for biologists. As a CLI application, we have tested it for ONT long-read data focusing on whole genome shotgun datasets that can be widely used to the greater research community. However, please note that basecalling and visualising a big dataset would require large computational resources on HPC or Cloud. 
 
 
 ## Citation
