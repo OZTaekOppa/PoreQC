@@ -3,7 +3,7 @@ An automated nextflow pipeline read basecalling, quality control and adapter rem
 
 
 ## Brief Background
-PoreQC is a [Nextflow](https://github.com/nextflow-io/nextflow) pipeline for Oxford nanopore reads ([Slow5](https://github.com/hasindu2008/slow5tools), [Pod5](https://github.com/nanoporetech/pod5-file-format) and [Fastq](https://en.wikipedia.org/wiki/FASTQ_format)). Integrating with [Guppy](https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview), [Dorado](https://github.com/nanoporetech/dorado), [Buttery-eel](https://github.com/Psy-Fer/buttery-eel), [Cutadapt](https://github.com/marcelm/cutadapt), and [Sequali](https://github.com/rhpvorderman/sequali), the automated pipeline can work for basecalling, quality control and removal adapters. We (Hyungtaek Jung and [the National Centre for Indigenous Genomics](https://ncig.anu.edu.au/) at [The Australian National University](https://www.anu.edu.au/), Australia) initially started this project to provide comprehensive data management at the [National Computational Infrastructure](https://nci.org.au/) for biologists. As a command-line interface (CLI) application, we have tested it for ONT long-read data focusing on whole genome shotgun datasets that can be widely used by the greater research community. However, please note that basecalling and visualising a big dataset would require large computational resources on HPC or Cloud. 
+**PoreQC** is a [Nextflow](https://github.com/nextflow-io/nextflow) pipeline for Oxford nanopore reads ([Slow5](https://github.com/hasindu2008/slow5tools), [Pod5](https://github.com/nanoporetech/pod5-file-format) and [Fastq](https://en.wikipedia.org/wiki/FASTQ_format)). Integrating with [Guppy](https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview), [Dorado](https://github.com/nanoporetech/dorado), [Buttery-eel](https://github.com/Psy-Fer/buttery-eel), [Cutadapt](https://github.com/marcelm/cutadapt), and [Sequali](https://github.com/rhpvorderman/sequali), the automated pipeline can work for basecalling, quality control and removal adapters. We (Hyungtaek Jung and [the National Centre for Indigenous Genomics](https://ncig.anu.edu.au/) at [The Australian National University](https://www.anu.edu.au/), Australia) initially started this project to provide comprehensive data management at the [National Computational Infrastructure](https://nci.org.au/) for biologists. As a command-line interface (CLI) application, we have tested it for ONT long-read data focusing on whole genome shotgun datasets that can be widely used by the greater research community. However, please note that basecalling and visualising a big dataset would require large computational resources on HPC or Cloud. 
 
 
 ## Citation
@@ -23,7 +23,7 @@ Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaar
 
 ## STABLE (version 0.0.XXX)
 Release date: January 2024
-PoreQC comprises two key features (basecalling and quality control) and four interactive steps with open-source programs (See LICENSE), mainly written in Nextflow. 
+**PoreQC** comprises two key features (basecalling and quality control) and four interactive steps with open-source programs (See LICENSE), mainly written in Nextflow. 
 
 
 ## INSTALLATION
@@ -46,7 +46,7 @@ Please download the program from [this link](https://github.com/OZTaekOppa/PoreQ
 
 ## License
 
-PoreQC is provided under the MIT license and is based on other open-source software:
+**PoreQC** is provided under the MIT license and is based on other open-source software:
 
 [Guppy](https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview) for  basecalling and processing raw signal data from nanopore sequencing devices, providing accurate DNA sequence information.
 
@@ -69,7 +69,7 @@ Oxford Nanopore reads(https://ngdc.cncb.ac.cn/gsa/browse/CRA004538) and (https:/
 
 ## GETTING STARTED
 
-PoreQC, integrated with Nextflow, has two specific features: a basecalling (Slow5) and a result summary and visualisation of quality control (Fastq). The data input/output enables end-to-end file selection. The result summary and visualisation are mainly designed to visualise the outcome for quality control. Please note that all required input files (e.g. Slow5) must be prepared from [Slow5tools](https://github.com/hasindu2008/slow5tools) to have a seamless experience of PoreQC. However, users can use Fastq files for quick quality control. 
+**PoreQC**, integrated with Nextflow, has two specific features: a basecalling (Slow5) and a result summary and visualisation of quality control (Fastq). The data input/output enables end-to-end file selection. The result summary and visualisation are mainly designed to visualise the outcome for quality control. Please note that all required input files (e.g. Slow5) must be prepared from [Slow5tools](https://github.com/hasindu2008/slow5tools) to have a seamless experience of **PoreQC**. However, users can use Fastq files for quick quality control. 
 
 
 ### Slow5 format:
@@ -83,13 +83,13 @@ PoreQC, integrated with Nextflow, has two specific features: a basecalling (Slow
 - Select model: Depending on ONT library preparation and sequencing kits, users must select the proper model in the pipeline.
 - Module load: Users can choose two options between buttery-eel (v0.4.2) + guppy (v6.5.7) and buttery-eel (v0.4.2) + dorado (v7.2.13). Please check the page of Butter-eel [Buttery-eel](https://github.com/Psy-Fer/buttery-eel) for the latest versions.
 - Default mode: This mode will do the basic basecalling with detection and removal of adapters.
-Usage: Execute this command in the terminal.
-qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
+> Usage: Execute this command in the terminal.
+> qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
   
 - Advanced mode: This mode will do the basecalling, removal adapters and split reads.
 Add parameters: Add these parameters "--detect_mid_strand_adapter --trim_adapters --detect_adapter --do_read_splitting" in the pipeline, specifically after "--max_queued_reads 20000."
-Usage: Execute this command in the terminal.
-qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
+> Usage: Execute this command in the terminal.
+> qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_raw_data/OutFQDrdT2 ./buttery-eel_QT0285.pbs.sh
 
 
 ### Reads Stats:
@@ -132,5 +132,5 @@ Please see GitHub page.
 
 ## COPYRIGHT
 
-The full PoreQC is distributed under the MIT license. 
+The full **PoreQC** is distributed under the MIT license. 
 
