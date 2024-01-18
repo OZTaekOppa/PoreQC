@@ -100,10 +100,10 @@ qsub -v MERGED_SLOW5=/ONT_raw_data/QTXXXX230285_reads.blow5,BASECALL_OUT=/ONT_ra
 - Requirement: The script of Perl/bash requires a Perl library.
 - Input: Fastq file generated from buttery-eel pipeline. 
 - Perl script: An in-house script to calculate the basic stats of Fastq file (including compressed file format).
-- Usage: Execute this command in the terminal.
-Mandatory parameters: --input.fq and --out para
-Optional parameters: --t and --mem
-Help: perl fqreadstats.pl --help
+1. Usage: Execute this command in the terminal.
+1. Mandatory parameters: --input.fq and --out para
+1. Optional parameters: --t and --mem
+1. Help: perl fqreadstats.pl --help
 ```
 perl fqreadstats.pl --input.fq test_reads.fq.gz --out test_reads.csv --t 2 --mem 40
 ```
