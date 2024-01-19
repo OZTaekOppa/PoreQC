@@ -22,8 +22,8 @@ An automated nextflow pipeline read basecalling, quality control and adapter rem
 
 
 ## STABLE (version 0.0.XXX)
-Release date: January 2024
-**PoreQC** comprises two key features (basecalling and quality control) and four interactive steps with open-source programs (See LICENSE). 
+- Release date: January 2024
+- **PoreQC** comprises two key features (basecalling and quality control) and four interactive steps with open-source programs (See LICENSE). 
 
 
 ## INSTALLATION
