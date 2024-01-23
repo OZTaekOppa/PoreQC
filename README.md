@@ -62,7 +62,7 @@ Please download the program from [this link](https://github.com/OZTaekOppa/PoreQ
 
 [Nextflow](https://github.com/nextflow-io/nextflow) for a data-driven computational workflow engine designed to facilitate scalable and reproducible scientific workflows.
 
-[In-house Perl Script] for calculating basic statistics of a FASTQ file in-house.
+[In-house Perl Script (fqreqdstats.pl)](https://github.com/OZTaekOppa/PoreQC/blob/main/scripts/fqreadstats.pl) for calculating basic statistics of a FASTQ file in-house.
 
 
 ### Tested Datasets
