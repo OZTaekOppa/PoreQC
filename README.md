@@ -1,6 +1,8 @@
 # PoreQC
 An automated nextflow pipeline read basecalling, quality control and adapter removal
 
+![PoreQC Logo](https://github.com/OZTaekOppa/PoreQC/blob/main/images/PoreQC_Logo.png)
+
 
 ## Brief Background
 **PoreQC** is a [Nextflow](https://github.com/nextflow-io/nextflow) pipeline for Oxford nanopore reads ([Slow5](https://github.com/hasindu2008/slow5tools), [Pod5](https://github.com/nanoporetech/pod5-file-format) and [Fastq](https://en.wikipedia.org/wiki/FASTQ_format)). Integrating with [Guppy](https://community.nanoporetech.com/docs/prepare/library_prep_protocols/Guppy-protocol/v/gpb_2003_v1_revax_14dec2018/guppy-software-overview), [Dorado](https://github.com/nanoporetech/dorado), [Buttery-eel](https://github.com/Psy-Fer/buttery-eel), [Cutadapt](https://github.com/marcelm/cutadapt), and [Sequali](https://github.com/rhpvorderman/sequali), the automated pipeline can work for basecalling, quality control and removal adapters. We (Hyungtaek Jung and the [National Centre for Indigenous Genomics](https://ncig.anu.edu.au/) at [The Australian National University](https://www.anu.edu.au/), Australia) initially started this project to provide comprehensive data management at the [National Computational Infrastructure](https://nci.org.au/) for biologists. As a command-line interface (CLI) application, we have tested it for ONT long-read data focusing on whole genome shotgun datasets that can be widely used by the greater research community. However, please note that basecalling and visualising a big dataset would require large computational resources on HPC or Cloud. 
@@ -71,6 +73,7 @@ Oxford Nanopore reads(https://ngdc.cncb.ac.cn/gsa/browse/CRA004538) and (https:/
 
 **PoreQC**, integrated with Nextflow, has two specific features: a basecalling (Slow5) and a result summary and visualisation of quality control (Fastq). The data input/output enables end-to-end file selection. The result summary and visualisation are mainly designed to visualise the outcome for quality control. Please note that all required input files (e.g. Slow5) must be prepared from [Slow5tools](https://github.com/hasindu2008/slow5tools) to have a seamless experience of **PoreQC**. However, users can use Fastq files for quick quality control. 
 
+![PoreQC Workflow](https://github.com/OZTaekOppa/PoreQC/blob/main/images/PoreQC_Flowchart.png)
 
 ### Slow5 format:
 - Slow5 tools: Please see the official page of [Slow5tools](https://github.com/hasindu2008/slow5tools) to make a proper Slow5 format from the ONT data.
