@@ -19,7 +19,7 @@ Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaar
 + GETTING STARTED
 + FAQ
 + WIKI PAGE
-+ AUTHOR
++ AUTHORS
 + COPYRIGHT
 
 
@@ -158,7 +158,7 @@ We encourage users to use the [Issues](https://github.com/OZTaekOppa/PoreQC/issu
 Please see GitHub page.
 
 
-## AUTHOR
+## AUTHORS
 
 **Hyungtaek Jung** and the [**National Centre for Indigenous Genomics**](https://ncig.anu.edu.au/).
 
