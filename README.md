@@ -9,7 +9,7 @@ An automated nextflow pipeline read basecalling, quality control and adapter rem
 
 
 ## Citation
-Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaarachchi, Hardip Patel: **PoreQC**: An automated nextflow pipeline for oxford nanopore read basecalling, quality control and adapter removal, [PLoS Comp Biol Submitted](https://www.biorxiv.org/XXXX).
+Hyungtaek Jung et al.: **PoreQC**: An automated nextflow pipeline for oxford nanopore read basecalling, quality control and adapter removal, [Preparation for Submission](https://www.biorxiv.org/XXXX).
 
 
 ## Contents:
@@ -24,7 +24,6 @@ Hyungtaek Jung, Kirat Alreja, Kosar Hooshmand, Hadi Nazem-Bokaee, Hasindu Gamaar
 
 
 ## STABLE (version 0.0.XXX)
-- Release date: January 2024
 - **PoreQC** comprises two key features (basecalling and quality control) and four interactive steps with open-source programs (See LICENSE). 
 
 
